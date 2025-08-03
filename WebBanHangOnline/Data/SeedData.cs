@@ -25,7 +25,7 @@ namespace WebBanHangOnline.Data
             }
 
             // --- Tạo tài khoản Admin mặc định ---
-            var adminEmail = "phamhieuhp050505@gmail.com";
+            var adminEmail = "ngmanhcuong2011@gmail.com";
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
             // Kiểm tra xem tài khoản admin đã tồn tại chưa
@@ -33,15 +33,15 @@ namespace WebBanHangOnline.Data
             {
                 var newAdminUser = new User
                 {
-                    UserName = "admin_phamhieu", // Tên đăng nhập là duy nhất
+                    UserName = "cuongnguyen2011", // Tên đăng nhập là duy nhất
                     Email = adminEmail,
-                    FullName = "Phạm Xuân Hiếu (Admin)",
+                    FullName = "Nguyễn Mạnh Cường",
                     EmailConfirmed = true // Xác thực email luôn để đăng nhập được ngay
                 };
 
                 // Tạo người dùng với mật khẩu "admin"
                 // Lưu ý: Trong dự án thực tế, hãy dùng một mật khẩu mạnh hơn.
-                var result = await userManager.CreateAsync(newAdminUser, "05052005");
+                var result = await userManager.CreateAsync(newAdminUser, "cuong0203");
 
                 if (result.Succeeded)
                 {
